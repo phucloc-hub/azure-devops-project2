@@ -28,7 +28,7 @@ def home():
 def predict():
     # Performs an sklearn prediction
     try:
-        clf = joblib.load("./Housing_price_model/GradientBoostingRegressor.joblib")
+        clf = joblib.load("./Housing_price_model/LinearRegression.joblib")
     except OSError as e:
         if e.errno == 2:  # errno 2 indicates FileNotFoundError
             LOG.info("JSON payload: %s json_payload")
