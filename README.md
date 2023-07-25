@@ -1,6 +1,6 @@
 # Overview
 
-Hello, I am Tho, this is project 2 (CICD) in Nanodegree for DevOps Engineer using MS Azure from Udacity.
+Hello, I am Loc, this is project 2 (CICD) in Nanodegree for DevOps Engineer using MS Azure from Udacity.
 
 This project consists of flask application that is developed to predict housing prices in Boston (the model is already created by the instructor). 
 
@@ -12,7 +12,7 @@ If anything changed in it repository,  it will trigger the Github Action and als
 
 ## Badge
 
-[![Python application test with Github Actions](https://github.com/thoeProject/azure-devops-project2.1/actions/workflows/pythonapp.yml)
+[![Python application test with Github Actions](https://github.com/phucloc-hub/azure-devops-project2.1/actions/workflows/pythonapp.yml)
 
 ## Project Plan
 
@@ -24,15 +24,15 @@ A [spreadsheet](project-schedule-h.xlsx) to manage the project plan
 
 Here is an architectural diagram:
 
-![diagram](https://github.com/thoeProject/azure-devops-project2.1/blob/main/screenshot/diagram.jpg)
+![diagram](https://github.com/phucloc-hub/azure-devops-project2.1/blob/main/screenshot/diagram.jpg)
 
 ## Deploy the app in Azure Cloud Shell
 
 In Azure Cloud Shell, clone the repo:
 ```
-git clone git@github.com:thoeProject/azure-devops-project2.1.git
+git clone git@github.com:phucloc-hub/azure-devops-project2.1.git
 ```
-![screenshot-gitClone-AzureCloud](https://github.com/thoeProject/azure-devops-project2.1/blob/main/screenshot/git_clone.png)
+![screenshot-gitClone-AzureCloud](https://github.com/phucloc-hub/azure-devops-project2.1/blob/main/screenshot/git_clone.png)
 
 
 Change into the new directory:
@@ -60,16 +60,16 @@ Install dependencies in the virtual environment and run tests:
 ```
 make all
 ```
-![make-all](https://github.com/thoeProject/azure-devops-project2.1/blob/main/screenshot/make_all.png)
+![make-all](https://github.com/phucloc-hub/azure-devops-project2.1/blob/main/screenshot/make_all.png)
 
 Make change and test GitHub action
-![screenshot-test-githubaction](https://github.com/thoeProject/azure-devops-project2.1/blob/main/screenshot/git_action.png)
+![screenshot-test-githubaction](https://github.com/phucloc-hub/azure-devops-project2.1/blob/main/screenshot/git_action.png)
 
 ## Deploy the app to an Azure App Service
 
 Create an App Service in Azure. 
 
-Use this [file](https://github.com/thoeProject/azure-devops-project2.1/blob/main/commands.sh) to create new App Services
+Use this [file](https://github.com/phucloc-hub/azure-devops-project2.1/blob/main/commands.sh) to create new App Services
 
 ```
 az webapp up -n azure-devops-project2
@@ -84,11 +84,11 @@ Next, create the pipeline in Azure DevOps. The basic steps are:
 
 Screenshot of the App Service:
 
-![My WebApp](https://github.com/thoeProject/azure-devops-project2.1/blob/main/screenshot/app.png)
+![My WebApp](https://github.com/phucloc-hub/azure-devops-project2.1/blob/main/screenshot/app.png)
 
 Screenshot of Azure DevOps Project:
 
-![My_DevOps](https://github.com/thoeProject/azure-devops-project2.1/blob/main/screenshot/azure_devops.png)
+![My_DevOps](https://github.com/phucloc-hub/azure-devops-project2.1/blob/main/screenshot/azure_devops.png)
 
 To test the app running in Azure App Service, edit line 28 of the make_predict_azure_app.sh script with the DNS name of your app. Then run the script:
 ```
@@ -97,19 +97,19 @@ To test the app running in Azure App Service, edit line 28 of the make_predict_a
 
 If it's working you should see the following output:
 
-![screenshot-prediction](https://github.com/thoeProject/azure-devops-project2.1/blob/main/screenshot/prediction.jpg)
+![screenshot-prediction](https://github.com/phucloc-hub/azure-devops-project2.1/blob/main/screenshot/prediction.jpg)
 
 You can also visit the URL of the App Service via the browser and you should see the following page:
 
-![screenshot-browser](https://github.com/thoeProject/azure-devops-project2.1/blob/main/screenshot/app.png)
+![screenshot-browser](https://github.com/phucloc-hub/azure-devops-project2.1/blob/main/screenshot/app.png)
 
 View the app logs:
 
 To view the log in Cloud Shell
 ```
-az webapp log tail -g Azuredevops -n azure-devops-project2-thoeProject
+az webapp log tail -g Azuredevops -n azure-devops-project2-loc
 ```
-![screenshot-log-webapp](https://github.com/thoeProject/azure-devops-project2.1/blob/main/screenshot/log_trail.png)
+![screenshot-log-webapp](https://github.com/phucloc-hub/azure-devops-project2.1/blob/main/screenshot/log_trail.png)
 
 
 > 
@@ -129,9 +129,9 @@ locust -f locustfile.py --host https://azure-devops-project2-tho.azurewebsites.n
 ```
 Open a browser and go to [http://localhost:8089](http://localhost:8089) then click Start Swarming:
 
-![screenshot-loadtest#1](https://github.com/thoeProject/azure-devops-project2.1/blob/main/screenshot/locust1.png)
-![screenshot-loadtest#2](https://github.com/thoeProject/azure-devops-project2.1/blob/main/screenshot/locust2.png)
-![screenshot-loadtest#3](https://github.com/thoeProject/azure-devops-project2.1/blob/main/screenshot/locust3.png)
+![screenshot-loadtest#1](https://github.com/phucloc-hub/azure-devops-project2.1/blob/main/screenshot/locust1.png)
+![screenshot-loadtest#2](https://github.com/phucloc-hub/azure-devops-project2.1/blob/main/screenshot/locust2.png)
+![screenshot-loadtest#3](https://github.com/phucloc-hub/azure-devops-project2.1/blob/main/screenshot/locust3.png)
 
 ## Future Enhancements
 - Creating a UI for making predictions.
