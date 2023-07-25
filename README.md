@@ -12,7 +12,8 @@ If anything changed in it repository,  it will trigger the Github Action and als
 
 ## Badge
 
-[![Python application test with Github Actions](https://github.com/phucloc-hub/azure-devops-project2.1/actions/workflows/pythonapp.yml)
+[![Python application test with Github Actions](https://github.com/phucloc-hub/azure-devops-project2.1/actions/workflows/pythonapp.yml/badge.svg)](https://github.com/phucloc-hub/azure-devops-project2.1/actions/workflows/pythonapp.yml)
+
 
 ## Project Plan
 
@@ -32,7 +33,7 @@ In Azure Cloud Shell, clone the repo:
 ```
 git clone git@github.com:phucloc-hub/azure-devops-project2.1.git
 ```
-![screenshot-gitClone-AzureCloud](https://github.com/phucloc-hub/azure-devops-project2.1/blob/main/screenshot/git_clone.png)
+![screenshot-gitClone-AzureCloud](https://github.com/phucloc-hub/azure-devops-project2.1/blob/main/screenshot/git%20clone.png)
 
 
 Change into the new directory:
@@ -60,10 +61,10 @@ Install dependencies in the virtual environment and run tests:
 ```
 make all
 ```
-![make-all](https://github.com/phucloc-hub/azure-devops-project2.1/blob/main/screenshot/make_all.png)
+![make-all](https://github.com/phucloc-hub/azure-devops-project2.1/blob/main/screenshot/make%20all.png)
 
 Make change and test GitHub action
-![screenshot-test-githubaction](https://github.com/phucloc-hub/azure-devops-project2.1/blob/main/screenshot/git_action.png)
+![screenshot-test-githubaction](https://github.com/phucloc-hub/azure-devops-project2.1/blob/main/screenshot/test%20git%20action.png)
 
 ## Deploy the app to an Azure App Service
 
@@ -84,11 +85,11 @@ Next, create the pipeline in Azure DevOps. The basic steps are:
 
 Screenshot of the App Service:
 
-![My WebApp](https://github.com/phucloc-hub/azure-devops-project2.1/blob/main/screenshot/app.png)
+![My WebApp](https://github.com/phucloc-hub/azure-devops-project2.1/blob/main/screenshot/web.png)
 
 Screenshot of Azure DevOps Project:
 
-![My_DevOps](https://github.com/phucloc-hub/azure-devops-project2.1/blob/main/screenshot/azure_devops.png)
+![My_DevOps](https://github.com/phucloc-hub/azure-devops-project2.1/blob/main/screenshot/devops%20project.png)
 
 To test the app running in Azure App Service, edit line 28 of the make_predict_azure_app.sh script with the DNS name of your app. Then run the script:
 ```
@@ -97,11 +98,11 @@ To test the app running in Azure App Service, edit line 28 of the make_predict_a
 
 If it's working you should see the following output:
 
-![screenshot-prediction](https://github.com/phucloc-hub/azure-devops-project2.1/blob/main/screenshot/prediction.jpg)
+![screenshot-prediction](https://github.com/phucloc-hub/azure-devops-project2.1/blob/main/screenshot/prediction.png)
 
 You can also visit the URL of the App Service via the browser and you should see the following page:
 
-![screenshot-browser](https://github.com/phucloc-hub/azure-devops-project2.1/blob/main/screenshot/app.png)
+![screenshot-browser](https://github.com/phucloc-hub/azure-devops-project2.1/blob/main/screenshot/web.png)
 
 View the app logs:
 
@@ -109,7 +110,7 @@ To view the log in Cloud Shell
 ```
 az webapp log tail -g Azuredevops -n azure-devops-project2-loc
 ```
-![screenshot-log-webapp](https://github.com/phucloc-hub/azure-devops-project2.1/blob/main/screenshot/log_trail.png)
+![screenshot-log-webapp](https://github.com/phucloc-hub/azure-devops-project2.1/blob/main/screenshot/log%20tail.png)
 
 
 > 
@@ -125,7 +126,7 @@ pip install locust
 
 Start load test:
 ```
-locust -f locustfile.py --host https://azure-devops-project2-tho.azurewebsites.net/ --users 500 --spawn-rate 5 
+locust -f locustfile.py --host https://azure-devops-project2-loc.azurewebsites.net/ --users 500 --spawn-rate 5 
 ```
 Open a browser and go to [http://localhost:8089](http://localhost:8089) then click Start Swarming:
 
